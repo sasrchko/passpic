@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FEJJEFHMX0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEJJEFHMX0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FEJJEFHMX0');
+  </script>
 
-  gtag('config', 'G-FEJJEFHMX0');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Passpic — Private Passport & Image Resizer</title>
-  <meta name="description" content="Resize and compress images privately in your browser. Perfect for Indian Passport Seva, US Passport, Schengen and everyday use. Nothing is ever uploaded." />
+  <title>Passpic — Private Passport Photo Resizer</title>
+  <meta name="description" content="Resize photos for Indian Passport, US Passport and Schengen visa. Everything happens in your browser." />
   <meta name="theme-color" content="#f8fafc" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
         </div>
         <div class="header-privacy">
           <span class="privacy-dot"></span>
-          100% Private — Nothing leaves your device
+          Nothing leaves your device
         </div>
       </div>
     </header>
@@ -38,14 +38,12 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="hero-badge">Privacy-first · Browser-only</div>
-          <h1>Make photos passport-ready<br>without sending them anywhere</h1>
+          <h1>Passport photo resizer</h1>
           <p class="hero-sub">
-            Resize and compress images entirely on your device. 
-            Ideal for Indian Passport Seva, US Passport, Schengen, and everyday use.
+            Resize photos for Indian Passport Seva, US Passport and Schengen visa.<br>
+            All processing happens in your browser.
           </p>
 
-          <!-- Neutral "Select" action – no upload metaphor -->
           <div id="dropzone" class="select-zone" tabindex="0" role="button" aria-label="Select images from your device">
             <div class="select-zone-inner">
               <div class="select-icon">
@@ -56,36 +54,19 @@
                 </svg>
               </div>
               <div class="select-text">
-                <strong>Select images from your device</strong>
-                <span>or drag them here · JPG, PNG, WebP</span>
+                <strong>Select images</strong>
+                <span>or drag them here</span>
               </div>
             </div>
             <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp" multiple hidden />
           </div>
-
-          <div class="trust-row">
-            <div class="trust-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Nothing uploaded
-            </div>
-            <div class="trust-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              Instant
-            </div>
-            <div class="trust-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              Free forever
-            </div>
-          </div>
         </div>
       </section>
 
-      <!-- Prominent presets -->
       <section class="presets-section">
         <div class="container">
           <div class="presets-header">
-            <h2>Quick presets</h2>
-            <p>Click a preset after selecting images — they update automatically</p>
+            <h2>Presets</h2>
           </div>
           <div class="preset-grid" id="globalPresets">
             <!-- Filled by JS -->
@@ -93,12 +74,11 @@
         </div>
       </section>
 
-      <!-- Image queue -->
       <section id="queue" class="queue hidden">
         <div class="container">
           <div class="queue-bar">
             <div class="queue-title">
-              <h2>Your images</h2>
+              <h2>Images</h2>
               <span id="imageCount" class="count">0</span>
             </div>
             <div class="queue-actions">
@@ -110,30 +90,24 @@
         </div>
       </section>
 
-      <section class="how">
+      <section class="how" style="padding-top: 2rem;">
         <div class="container">
-          <div class="how-grid">
-            <div class="how-step">
-              <div class="step-num">1</div>
-              <div>
-                <strong>Select images</strong>
-                <p>They never leave your device</p>
-              </div>
-            </div>
-            <div class="how-step">
-              <div class="step-num">2</div>
-              <div>
-                <strong>Choose a preset</strong>
-                <p>Images update automatically</p>
-              </div>
-            </div>
-            <div class="how-step">
-              <div class="step-num">3</div>
-              <div>
-                <strong>Download</strong>
-                <p>Ready for passport or web use</p>
-              </div>
-            </div>
+          <div class="presets-header" style="margin-bottom: 1rem;">
+            <h2>Guides</h2>
+          </div>
+          <div class="preset-grid">
+            <a href="/indian-passport-photo.html" class="preset-card" style="text-decoration: none;">
+              <span class="preset-name">Indian Passport</span>
+              <span class="preset-spec">630 × 810</span>
+            </a>
+            <a href="/us-passport-photo.html" class="preset-card" style="text-decoration: none;">
+              <span class="preset-name">US Passport</span>
+              <span class="preset-spec">600 × 600</span>
+            </a>
+            <a href="/schengen-visa-photo.html" class="preset-card" style="text-decoration: none;">
+              <span class="preset-name">Schengen Visa</span>
+              <span class="preset-spec">35 × 45 mm</span>
+            </a>
           </div>
         </div>
       </section>
@@ -141,7 +115,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>Passpic — Private by design. Your images never leave your device.</p>
+        <p>Passpic</p>
       </div>
     </footer>
   </div>
