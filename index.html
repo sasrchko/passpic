@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passpic — Private Passport & Image Resizer</title>
+  <meta name="description" content="Resize and compress images privately in your browser. Perfect for Indian Passport Seva, US Passport, Schengen and everyday use. Nothing is ever uploaded." />
+  <meta name="theme-color" content="#f8fafc" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="container header-inner">
+        <div class="logo">
+          <div class="logo-mark">P</div>
+          <span>Passpic</span>
+        </div>
+        <div class="header-privacy">
+          <span class="privacy-dot"></span>
+          100% Private — Nothing leaves your device
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-badge">Privacy-first · Browser-only</div>
+          <h1>Make photos passport-ready<br>without sending them anywhere</h1>
+          <p class="hero-sub">
+            Resize and compress images entirely on your device. 
+            Ideal for Indian Passport Seva, US Passport, Schengen, and everyday use.
+          </p>
+
+          <!-- Neutral "Select" action – no upload metaphor -->
+          <div id="dropzone" class="select-zone" tabindex="0" role="button" aria-label="Select images from your device">
+            <div class="select-zone-inner">
+              <div class="select-icon">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+              </div>
+              <div class="select-text">
+                <strong>Select images from your device</strong>
+                <span>or drag them here · JPG, PNG, WebP</span>
+              </div>
+            </div>
+            <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp" multiple hidden />
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Nothing uploaded
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Instant
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Free forever
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prominent presets -->
+      <section class="presets-section">
+        <div class="container">
+          <div class="presets-header">
+            <h2>Quick presets</h2>
+            <p>Click a preset after selecting images — they update automatically</p>
+          </div>
+          <div class="preset-grid" id="globalPresets">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Image queue -->
+      <section id="queue" class="queue hidden">
+        <div class="container">
+          <div class="queue-bar">
+            <div class="queue-title">
+              <h2>Your images</h2>
+              <span id="imageCount" class="count">0</span>
+            </div>
+            <div class="queue-actions">
+              <button id="clearAll" class="btn btn-ghost">Clear</button>
+              <button id="downloadAll" class="btn btn-primary" disabled>Download all</button>
+            </div>
+          </div>
+          <div id="imageList" class="image-list"></div>
+        </div>
+      </section>
+
+      <section class="how">
+        <div class="container">
+          <div class="how-grid">
+            <div class="how-step">
+              <div class="step-num">1</div>
+              <div>
+                <strong>Select images</strong>
+                <p>They never leave your device</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-num">2</div>
+              <div>
+                <strong>Choose a preset</strong>
+                <p>Images update automatically</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-num">3</div>
+              <div>
+                <strong>Download</strong>
+                <p>Ready for passport or web use</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Passpic — Private by design. Your images never leave your device.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
